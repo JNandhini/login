@@ -1,0 +1,16 @@
+version: '2'
+services:
+    hostactive:
+      container_name: login-container
+      build:
+          context: Dockerfile
+          dockerfile: Dockerfile
+      image: login:latest
+      ports: 
+          - 18888:8888
+      networks:
+          - spring-cloud-network  
+networks:
+    spring-cloud-network: 
+      driver: bridge
+      

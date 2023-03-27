@@ -8,7 +8,7 @@ import com.users.login.model.Login;
 
 public interface LoginRepository extends JpaRepository<Login,Integer> {
     Login findById(int user_id);
-    // Login findByemail_id(String email_id);
+    // Login findByEmailId(String email_id);
 
     
 }

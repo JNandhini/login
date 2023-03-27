@@ -8,19 +8,22 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="user_account")
-public class Login {
+public class ForgotPassword {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    public int user_id;
     public String email_id;
-    public String is_active;
-    public String login_password;
     public String verify_code;
-    // public String post_job;
-    public String is_admin;
-    public String is_verified;
-    public String last_name;
-    public String first_name;
-
+    public void setverify_code(String verify_code) {
+        this.verify_code = verify_code;
+    }
+    public String getverify_code() {
+        return verify_code;
+    }
+    public void setemail_id(String email_id) {
+        this.email_id = email_id;
+    }
+    public String getemail_id() {
+        return email_id;
+    }
 }
 
